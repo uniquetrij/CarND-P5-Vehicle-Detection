@@ -1,0 +1,16 @@
+
+\.idea/
+
+__pycache__/
+
+video_frames/
+
+dataset/non-vehicles/
+
+dataset/non-vehicles_smallset/
+
+dataset/vehicles/
+
+dataset/vehicles_smallset/
+
+*.zip

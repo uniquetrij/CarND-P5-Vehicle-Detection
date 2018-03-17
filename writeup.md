@@ -56,7 +56,7 @@ The goals / steps of this project are the following:
 
 #### 1. Provide a Writeup / README that includes all the rubric points and how you addressed each one.  You can submit your writeup as markdown or pdf.
 
-You're reading it [Here](https://github.com/uniquetrij/CarND-P5-Vehicle-Detection/blob/master/writeup_template.md) !
+You're reading it [Here](https://github.com/uniquetrij/CarND-P5-Vehicle-Detection/blob/master/writeup.md) !
 
 First, I created a class `Dataset` (file named `Dataset.py`) that serves as a helper for loading the `vehicle` and `non-vehicle` images from a file system path. An instance of this class will serve as input to my `Classifier` mentioned later. An instance, say `dataset` of `Dataset` can be obtained in either of the following ways:
 1. by passing the list of cars and not-cars image paths to the class initializer (code lines 7 through 11).
@@ -212,5 +212,9 @@ The `Main.py` file contains a method named `process_video()` which takes the vid
 
 3. To achieve some speedup, our session instructor advised us to only concentrate on the lower-right quarter of the image instead of the entire lower half. 
 
-4. Although HOG-Subsampling could have been more efficient, it produced jittery bounding boxes, more often false positives, and also sometimes false negatives (missing the car entirely for few consecutive frames). Therefore I used simple sliding window technique 
+4. Although HOG-Subsampling could have been more efficient, it produced jittery bounding boxes, more often false positives, and also sometimes false negatives (missing the car entirely for few consecutive frames). Therefore I used simple sliding window technique.
+
+5. Performance can be improved using an 'rbf' kernel instead of 'linear' one. Due to system constraints, I wasn't able to try 'rbf' as it was taking too long to train.
+
+6. Convolution and Deep Neural Network based classification would surely enhance performance as those can be executed on a fast GPU thereby making the classification response more real-time. YOLO might be interesting to look into in this regard.
 
